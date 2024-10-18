@@ -49,7 +49,7 @@ body {
 
 .the-img {
   background: linear-gradient(var(--overlay), var(--overlay)),
-  url(../images/image-header-mobile.jpg);
+  url(./images/image-header-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 15rem;
@@ -131,7 +131,7 @@ a:focus-visible {
 
   .the-img {
     background: linear-gradient(var(--overlay), var(--overlay)),
-    url(/images/image-header-desktop.jpg);
+    url(./images/image-header-desktop.jpg);
     height: unset;
     min-width: 50%;
   }
