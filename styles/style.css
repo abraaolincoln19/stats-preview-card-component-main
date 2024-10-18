@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap');
+
+:root {
+
+  /* main background colour*/
+  --Very-dark-blue: hsl(233, 47%, 7%);
+  /*  card background colour*/
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  /* accent */
+  --Soft-violet: hsl(277, 64%, 61%);
+  /* main heading and stats */
+  --White: hsl(0, 0%, 100%);
+  /* main paragraph */
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  /* stat headings */
+  --Stats-headings: hsla(0, 0%, 100%, 0.6);
+  --overlay: rgba(128, 10, 197, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+
+  background: var(--Very-dark-blue);
+  min-height: 100vh;
+  /* then we can now center it with flexbox */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9375rem;
+  font-family: "Lexend Deca",sans-serif;
+  padding: 1rem 0.7rem;
+  text-align: center;
+}
+
+.main-container {
+  background: var(--Dark-desaturated-blue);
+  margin: 2rem 0.5rem;
+  max-width: 23rem;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.the-img {
+  background: linear-gradient(var(--overlay), var(--overlay)),
+  url(../images/image-header-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 15rem;
+}
+
+.typography {
+  padding: 1rem;
+}
+
+.top-text h1 {
+  color: var(--White);
+  padding: 1.5rem 1rem; 
+  font-size: 1.8rem;
+}
+
+.emphasized {
+  color: var(--Soft-violet);
+}
+
+.top-text p {
+  color: var(--main-paragraph);
+  margin: 1rem;
+}
+
+.stats {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+li {
+  margin: 1.5rem;
+  text-transform: uppercase;
+}
+
+.number {
+  color: var(--White);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0.2rem;
+}
+
+.rating {
+  color: var(--Stats-headings);
+}
+
+
+/* here comes the footer */
+.attribution {
+  margin-bottom: 1.5rem;
+  font-size: 0.6875rem;
+  text-align: center;
+  color: #fff;
+}
+
+.attribution a {
+  color: var(--Soft-violet);
+}
+
+.attribution p:nth-child(2) {
+  margin-top: 0.3rem;
+}
+
+a:focus-visible {
+  outline: 0.1rem dotted #f4f4f4;
+}
+
+@media (min-width: 785px) {
+  
+  body {
+    text-align: unset;
+  }
+
+  .main-container {
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 90rem;
+  }
+
+  .the-img {
+    background: linear-gradient(var(--overlay), var(--overlay)),
+    url(/images/image-header-desktop.jpg);
+    height: unset;
+    min-width: 50%;
+  }
+
+  .typography {
+    padding: 2rem;
+  }
+
+  .stats {
+    display: flex;
+  }
+
+  .number {
+    margin: 0.5rem 0;
+  }
+
+  ul {
+    padding: 0 0.5rem 1.5rem 1rem;
+  }
+
+  li {
+    margin: 0 auto 0 0;
+  }
+
+
+
+}
+
